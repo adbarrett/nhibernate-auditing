@@ -1,4 +1,4 @@
-﻿namespace NHibernateAuditingDemo
+namespace NHibernateAuditingDemo
 {
     using FluentNHibernate.Cfg;
     using FluentNHibernate.Cfg.Db;
@@ -14,7 +14,7 @@
                 .Database(
                     MsSqlConfiguration.MsSql2012.ConnectionString(
                         x => x.FromConnectionStringWithKey("NHibernateAuditing")))
-                .Mappings(m => m.FluentMappings.AddFromAssemblyOf<EmployeeMapping>()
+                .Mappings(m => m.FluentMappings.AddFromAssemblyOf<AuditLogMapping>()
                     .Conventions.Add(ForeignKey.EndsWith("Id")))
                 .ExposeConfiguration(config =>
                 {

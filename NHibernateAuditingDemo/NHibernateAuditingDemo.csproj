@@ -64,8 +64,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AuditLog.cs" />
+    <Compile Include="AuditLogDetail.cs" />
+    <Compile Include="AuditLogDetailMapping.cs" />
     <Compile Include="EmployeeMapping.cs" />
     <Compile Include="DepartmentMapping.cs" />
+    <Compile Include="AuditLogMapping.cs" />
     <Compile Include="Department.cs" />
     <Compile Include="Employee.cs" />
     <Compile Include="IAuditable.cs" />
