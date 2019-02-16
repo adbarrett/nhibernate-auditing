@@ -1,8 +1,8 @@
-﻿namespace NHibernateAuditingDemo
-{
-    using System;
-    using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
+namespace NHibernateAuditingDemo.Models
+{
     public class AuditLog
     {
         public virtual string Id { get; set; }

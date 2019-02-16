@@ -64,20 +64,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AuditEventListener.cs" />
-    <Compile Include="AuditLog.cs" />
-    <Compile Include="AuditLogDetail.cs" />
-    <Compile Include="AuditLogDetailMapping.cs" />
-    <Compile Include="EmployeeMapping.cs" />
-    <Compile Include="DepartmentMapping.cs" />
-    <Compile Include="AuditLogMapping.cs" />
-    <Compile Include="Department.cs" />
-    <Compile Include="Employee.cs" />
-    <Compile Include="IAuditable.cs" />
-    <Compile Include="NHibernateSessionFactory.cs" />
-    <Compile Include="PreDeleteEventListener.cs" />
-    <Compile Include="PreInsertEventListener.cs" />
-    <Compile Include="PreUpdateEventListener.cs" />
+    <Compile Include="NHibernate\EventListeners\AuditEventListener.cs" />
+    <Compile Include="Models\AuditLog.cs" />
+    <Compile Include="Models\AuditLogDetail.cs" />
+    <Compile Include="NHibernate\Mappings\AuditLogDetailMapping.cs" />
+    <Compile Include="NHibernate\Mappings\EmployeeMapping.cs" />
+    <Compile Include="NHibernate\Mappings\DepartmentMapping.cs" />
+    <Compile Include="NHibernate\Mappings\AuditLogMapping.cs" />
+    <Compile Include="Models\Department.cs" />
+    <Compile Include="Models\Employee.cs" />
+    <Compile Include="Interfaces\IAuditable.cs" />
+    <Compile Include="NHibernate\NHibernateSessionFactory.cs" />
+    <Compile Include="NHibernate\EventListeners\PreDeleteEventListener.cs" />
+    <Compile Include="NHibernate\EventListeners\PreInsertEventListener.cs" />
+    <Compile Include="NHibernate\EventListeners\PreUpdateEventListener.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -85,5 +85,6 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

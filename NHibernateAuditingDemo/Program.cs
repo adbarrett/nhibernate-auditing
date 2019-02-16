@@ -1,8 +1,10 @@
-﻿namespace NHibernateAuditingDemo
-{
-    using System;
-    using NHibernate;
+﻿using System;
+using NHibernate;
+using NHibernateAuditingDemo.Models;
+using NHibernateAuditingDemo.NHibernate;
 
+namespace NHibernateAuditingDemo
+{
     public class Program
     {
         public static void Main(string[] args)

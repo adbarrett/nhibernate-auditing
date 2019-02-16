@@ -1,7 +1,8 @@
-﻿namespace NHibernateAuditingDemo
-{
-    using FluentNHibernate.Mapping;
+﻿using FluentNHibernate.Mapping;
+using NHibernateAuditingDemo.Models;
 
+namespace NHibernateAuditingDemo.NHibernate.Mappings
+{
     public class AuditLogMapping : ClassMap<AuditLog>
     {
         public AuditLogMapping()

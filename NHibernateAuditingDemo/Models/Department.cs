@@ -1,7 +1,8 @@
-﻿namespace NHibernateAuditingDemo
-{
-    using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using NHibernateAuditingDemo.Interfaces;
 
+namespace NHibernateAuditingDemo.Models
+{
     public class Department : IAuditable
     {
         public virtual string Id { get; set; }

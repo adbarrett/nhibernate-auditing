@@ -1,9 +1,9 @@
-﻿namespace NHibernateAuditingDemo
-{
-    using System.Threading;
-    using System.Threading.Tasks;
-    using NHibernate.Event;
+﻿using System.Threading;
+using System.Threading.Tasks;
+using NHibernate.Event;
 
+namespace NHibernateAuditingDemo.NHibernate.EventListeners
+{
     public class PreUpdateEventListener : IPreUpdateEventListener
     {
         public bool OnPreUpdate(PreUpdateEvent e)

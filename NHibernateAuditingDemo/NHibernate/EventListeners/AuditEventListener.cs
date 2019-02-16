@@ -1,9 +1,11 @@
-﻿namespace NHibernateAuditingDemo
-{
-    using System;
-    using System.Threading;
-    using NHibernate;
+﻿using System;
+using System.Threading;
+using NHibernate;
+using NHibernateAuditingDemo.Interfaces;
+using NHibernateAuditingDemo.Models;
 
+namespace NHibernateAuditingDemo.NHibernate.EventListeners
+{
     public static class AuditEventListenerHelper
     {
         public static void UpdateAuditTrail(object[] oldState, object[] newState,

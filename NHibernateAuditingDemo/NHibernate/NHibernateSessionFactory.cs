@@ -1,12 +1,14 @@
-﻿namespace NHibernateAuditingDemo
-{
-    using FluentNHibernate.Cfg;
-    using FluentNHibernate.Cfg.Db;
-    using FluentNHibernate.Conventions.Helpers;
-    using NHibernate;
-    using NHibernate.Event;
-    using NHibernate.Tool.hbm2ddl;
+﻿using FluentNHibernate.Cfg;
+using FluentNHibernate.Cfg.Db;
+using FluentNHibernate.Conventions.Helpers;
+using NHibernate;
+using NHibernate.Event;
+using NHibernate.Tool.hbm2ddl;
+using NHibernateAuditingDemo.NHibernate.EventListeners;
+using NHibernateAuditingDemo.NHibernate.Mappings;
 
+namespace NHibernateAuditingDemo.NHibernate
+{
     public static class NHibernateSessionFactory
     {
         public static ISessionFactory GetSessionFactory()

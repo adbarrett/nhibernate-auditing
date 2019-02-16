@@ -1,7 +1,8 @@
-﻿namespace NHibernateAuditingDemo
-{
-    using System;
+﻿using System;
+using NHibernateAuditingDemo.Interfaces;
 
+namespace NHibernateAuditingDemo.Models
+{
     public class Employee : IAuditable
     {
         public virtual string Id { get; set; }

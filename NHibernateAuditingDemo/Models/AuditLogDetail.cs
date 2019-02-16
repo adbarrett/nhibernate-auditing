@@ -1,4 +1,4 @@
-﻿namespace NHibernateAuditingDemo
+﻿namespace NHibernateAuditingDemo.Models
 {
     public class AuditLogDetail
     {
