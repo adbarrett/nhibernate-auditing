@@ -1,15 +1,37 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace NHibernateAuditingDemo
+﻿namespace NHibernateAuditingDemo
 {
-    class Program
+    using System;
+    using NHibernate;
+
+    public class Program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
+            ISessionFactory sessionFactory = NHibernateSessionFactory.GetSessionFactory();
+            using (ISession session = sessionFactory.OpenSession())
+            using (ITransaction transaction = session.BeginTransaction())
+            {
+                var department = new Department
+                {
+                    Id = Guid.NewGuid().ToString(),
+                    Name = "Sales"
+                };
+
+                session.Save(department);
+
+                var employee = new Employee
+                {
+                    Id = Guid.NewGuid().ToString(),
+                    FirstName = "Joe",
+                    LastName = "Bloggs",
+                    DateOfBirth = new DateTime(1985, 7, 30),
+                    Department = department
+                };
+
+                session.Save(employee);
+
+                transaction.Commit();
+            }
         }
     }
 }
