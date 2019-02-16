@@ -1,9 +1,10 @@
-namespace NHibernateAuditingDemo
+﻿namespace NHibernateAuditingDemo
 {
     using FluentNHibernate.Cfg;
     using FluentNHibernate.Cfg.Db;
     using FluentNHibernate.Conventions.Helpers;
     using NHibernate;
+    using NHibernate.Event;
     using NHibernate.Tool.hbm2ddl;
 
     public static class NHibernateSessionFactory
@@ -19,6 +20,15 @@ namespace NHibernateAuditingDemo
                 .ExposeConfiguration(config =>
                 {
                     new SchemaUpdate(config).Execute(false, true);
+                    config.EventListeners.PreInsertEventListeners =
+                        new IPreInsertEventListener[]
+                            { new PreInsertEventListener() };
+                    config.EventListeners.PreUpdateEventListeners =
+                        new IPreUpdateEventListener[]
+                            { new PreUpdateEventListener() };
+                    config.EventListeners.PreDeleteEventListeners =
+                        new IPreDeleteEventListener[]
+                            { new PreDeleteEventListener() };
                 })
                 .BuildSessionFactory();
         }
