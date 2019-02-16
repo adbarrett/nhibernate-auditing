@@ -2,7 +2,7 @@
 {
     using System;
 
-    public class Employee
+    public class Employee : IAuditable
     {
         public virtual string Id { get; set; }
         public virtual string FirstName { get; set; }

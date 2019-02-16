@@ -2,7 +2,7 @@
 {
     using System.Collections.Generic;
 
-    public class Department
+    public class Department : IAuditable
     {
         public virtual string Id { get; set; }
         public virtual string Name { get; set; }
